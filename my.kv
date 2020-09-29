@@ -1,0 +1,37 @@
+<MyGrid>
+
+    #vars here
+    name: name
+    experience: experience
+    stars: stars
+
+    #going to try floatlayout for dynamic placement tomorrow
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Name: "
+            TextInput:
+                id: name
+                multinline: False
+
+            Label:
+                text: "Experience: "
+            TextInput:
+                id: experience
+                multinline: False
+
+            Label:
+                text: "Stars: "
+            TextInput:
+                id: stars
+                multinline: False
+
+        Button:
+            text: "Submit"
+            on_press: root.submit_btn()
