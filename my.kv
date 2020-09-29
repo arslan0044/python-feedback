@@ -1,37 +1,14 @@
-<MyGrid>
+<Button>: #parent tag for buttons, meaning that every button tag will have these properties
+    font_size: 20
+    color: 0.11, 0.13, 0.21, 1
+    size_hint: 0.1, 0.1
 
-    #vars here
-    name: name
-    experience: experience
-    stars: stars
-
-    #going to try floatlayout for dynamic placement tomorrow
-    GridLayout:
-        cols:1
-        size: root.width - 200, root.height - 200
-        pos: 100, 100
-
-        GridLayout:
-            cols: 2
-
-            Label:
-                text: "Name: "
-            TextInput:
-                id: name
-                multinline: False
-
-            Label:
-                text: "Experience: "
-            TextInput:
-                id: experience
-                multinline: False
-
-            Label:
-                text: "Stars: "
-            TextInput:
-                id: stars
-                multinline: False
-
-        Button:
-            text: "Submit"
-            on_press: root.submit_btn()
+<FloatLayout>:
+    Button:
+        pos_hint: {"x": 0.5, "top": 1} # "x", "y", "top", "bottom", "left", "right"
+        text: "test"
+    Button:
+        id: angela
+        pos_hint: {"y":0.3}
+        text: "Michael"
+        background_color: 0.03, 0.04 , 0.04 , 1
