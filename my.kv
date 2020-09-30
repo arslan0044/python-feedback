@@ -1,64 +1,88 @@
-<Button>: #parent tag for buttons, meaning that every button tag will have these properties
-    font_size: 20
-    color: 0.4, 0.4, 0.7, 1
-    size_hint: 0.1, 0.1
+WindowManager: #this will tell the app we are using 2 windows
+    MainWindow:
+    SecondWindow:
 
-<FloatLayout>:
-    Label:
-        text: "Name:"
-        bold: True
-        font_name: "KeepCalm"
-        pos_hint: {"y":0.7, "x":0.11}
-        color: 0.1, 0.1, 0.1, 1
-        size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
-        font_size: 50
+<MainWindow>:
+    name: "main"
 
-    Label:
-        text: "Stars:"
-        bold: True
-        font_name: "KeepCalm"
-        pos_hint: {"y":0.1, "x":0.11}
-        color: 0.1, 0.1, 0.1, 1
-        size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
-        font_size: 50
+    FloatLayout:
+        Label:
+            text: "Name:"
+            bold: True
+            font_name: "KeepCalm"
+            pos_hint: {"y":0.7, "x":0.11}
+            color: 0.1, 0.1, 0.1, 1
+            size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
+            font_size: 50
 
-    ToggleButton:
-        id: star1
-        pos_hint: {"y":0.09, "x":0.3}
-        background_normal: 'normal.png'
-        background_down: 'down.png'
-        border: 30,30,30,30
-        on_press: app.star1()
+        Label:
+            text: "Stars:"
+            bold: True
+            font_name: "KeepCalm"
+            pos_hint: {"y":0.1, "x":0.11}
+            color: 0.1, 0.1, 0.1, 1
+            size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
+            font_size: 50
+
+        Button:
+            id: employees
+            pos_hint: {"y":0.7, "x":0.3}
+            text: "Employee List"
+            size_hint: 0.2, 0.1
+            on_release: app.root.current = "second"
+
+        ToggleButton:
+            id: star1
+            size_hint: 0.1, 0.1
+            pos_hint: {"y":0.09, "x":0.3}
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+            on_press: app.star1()
 
 
-    ToggleButton:
-        id: star2
-        pos_hint: {"y":0.09, "x":0.4}
-        background_normal: 'normal.png'
-        background_down: 'down.png'
-        border: 30,30,30,30
-        on_press: app.star2()
+        ToggleButton:
+            id: star2
+            size_hint: 0.1, 0.1
+            pos_hint: {"y":0.09, "x":0.4}
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+            on_press: app.star2()
 
-    ToggleButton:
-        id: star3
-        pos_hint: {"y":0.09, "x":0.5}
-        background_normal: 'normal.png'
-        background_down: 'down.png'
-        border: 30,30,30,30
-        on_press: app.star3()
+        ToggleButton:
+            id: star3
+            size_hint: 0.1, 0.1
+            pos_hint: {"y":0.09, "x":0.5}
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+            on_press: app.star3()
 
-    ToggleButton:
-        id: star4
-        pos_hint: {"y":0.09, "x":0.6}
-        background_normal: 'normal.png'
-        background_down: 'down.png'
-        border: 30,30,30,30
-        on_press: app.star4()
+        ToggleButton:
+            id: star4
+            size_hint: 0.1, 0.1
+            pos_hint: {"y":0.09, "x":0.6}
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+            on_press: app.star4()
 
-    ToggleButton:
-        id: star5
-        pos_hint: {"y":0.09, "x":0.7}
-        background_normal: 'normal.png'
-        background_down: 'down.png'
-        border: 30,30,30,30
-        on_press: app.star5()
+        ToggleButton:
+            id: star5
+            size_hint: 0.1, 0.1
+            pos_hint: {"y":0.09, "x":0.7}
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+            on_press: app.star5()
+
+<SecondWindow>
+    name: "second"
+    FloatLayout:
+
+        Button:
+            text: "Go Back"
+            pos_hint: {"y":0.7, "x":0.3}
+            size_hint: 0.2, 0.1
+            on_release: app.root.current = "main"
