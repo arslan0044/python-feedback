@@ -1,14 +1,65 @@
 <Button>: #parent tag for buttons, meaning that every button tag will have these properties
     font_size: 20
-    color: 0.11, 0.13, 0.21, 1
+    color: 0.4, 0.4, 0.7, 1
     size_hint: 0.1, 0.1
 
 <FloatLayout>:
+    Label:
+        text: "Name:"
+        bold: True
+        pos_hint: {"y":0.7, "x":0.11}
+        color: 0.1, 0.1, 0.1, 1
+        size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
+        font_size: 50
+
+    Label:
+        text: "Experience:"
+        bold: True
+        pos_hint: {"y":0.3, "x":0.15}
+        color: 0.1, 0.1, 0.1, 1
+        size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
+        font_size: 40
+
+    Label:
+        text: "Stars:"
+        bold: True
+        pos_hint: {"y":0.1, "x":0.11}
+        color: 0.1, 0.1, 0.1, 1
+        size_hint: 0.1, 0.1 #idk why but this for some reason also changes the position
+        font_size: 50
+
     Button:
-        pos_hint: {"x": 0.5, "top": 1} # "x", "y", "top", "bottom", "left", "right"
-        text: "test"
+        background_normal: 'normal.png'
+        background_down: 'down.png'
+        border: 30,30,30,30
+
+
     Button:
-        id: angela
-        pos_hint: {"y":0.3}
-        text: "Michael"
-        background_color: 0.03, 0.04 , 0.04 , 1
+        id: star1
+        pos_hint: {"y":0.09, "x":0.3}
+        text: "1"
+        background_color: 0.3, 0.3 , 0.3 , 1
+
+    Button:
+        id: star2
+        pos_hint: {"y":0.09, "x":0.4}
+        text: "2"
+        background_color: 0.3, 0.3 , 0.3 , 1
+
+    Button:
+        id: star3
+        pos_hint: {"y":0.09, "x":0.5}
+        text: "3"
+        background_color: 0.3, 0.3 , 0.3 , 1
+
+    Button:
+        id: star4
+        pos_hint: {"y":0.09, "x":0.6}
+        text: "4"
+        background_color: 0.3, 0.3 , 0.3 , 1
+
+    Button:
+        id: star5
+        pos_hint: {"y":0.09, "x":0.7}
+        text: "5"
+        background_color: 0.3, 0.3 , 0.3 , 1
