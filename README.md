@@ -3,6 +3,7 @@
 
  ## Things to add:
   - [x] Labels - Name, Stars\
-  A new activity with employees names (buttons) that will redirect to main activity on touch (added)\
-  Buttons - Stars (1-5) - (added), Submit Button, Employees Names Buttons\
-  Front End - Better Design (ill add it after backend is done)
+  - [x] A new activity with employees names (buttons) that will redirect to main activity on touch (added)\
+  - [x] Buttons - Stars (1-5)\
+  - [ ] Employees Names Buttons\
+  - [ ] Front End - Better Design (ill add it after backend is done)
