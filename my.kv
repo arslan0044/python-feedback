@@ -83,6 +83,41 @@ WindowManager: #this will tell the app we are using 2 windows
 
         Button:
             text: "Go Back"
-            pos_hint: {"y":0.7, "x":0.3}
+            pos_hint: {"y":0.7, "x":0.4}
             size_hint: 0.2, 0.1
             on_release: app.root.current = "main"
+
+        Button:
+            text: "Michael"
+            pos_hint: {"y":0.5, "x":0.3}
+            size_hint: 0.2, 0.1
+            on_press: app.employee1_choose()
+
+        Button:
+            text: "John"
+            pos_hint: {"y":0.4, "x":0.3}
+            size_hint: 0.2, 0.1
+            on_press: app.employee2_choose()
+
+        Button:
+            text: "Betty"
+            pos_hint: {"y":0.3, "x":0.3}
+            size_hint: 0.2, 0.1
+            on_press: app.employee3_choose()
+
+        Button:
+            text: "Elizabeth"
+            pos_hint: {"y":0.4, "x":0.5}
+            size_hint: 0.2, 0.1
+            on_press: app.employee5_choose()
+
+        Button:
+            text: "Emily"
+            pos_hint: {"y":0.3, "x":0.5}
+            size_hint: 0.2, 0.1
+            on_press: app.employee4_choose()
+        Button:
+            text: "George"
+            pos_hint: {"y":0.5, "x":0.5}
+            size_hint: 0.2, 0.1
+            on_press: app.employee6_choose()
