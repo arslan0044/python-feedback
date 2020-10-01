@@ -40,6 +40,12 @@ Window.clearcolor = (1, 1, 1, 1)
 Window.size = (1280, 800) #this is usually a resolution used by tablets (the main device i want to use this one)
 
 #global vars
+stars1 = False
+stars2 = False
+stars3 = False
+stars4 = False
+stars5 = False
+
 employee1_chosed = False
 employee2_chosed = False
 employee3_chosed = False
@@ -49,19 +55,29 @@ employee6_chosed = False
 #just dont touch this unless you know what you are doing
 class MyMainApp(App):
     def star1(self):
+        global stars1
         print("it worked - star 1")
+        stars1 = True
 
     def star2(self):
+        global stars2
         print("it worked - star 2")
+        stars2 = True
 
     def star3(self):
+        global stars3
         print("it worked - star 3")
+        stars3 = True
 
     def star4(self):
+        global stars4
         print("it worked - star 4")
+        stars4 = True
 
     def star5(self):
+        global stars5
         print("it worked - star 5")
+        stars5 = True
 
         #this is probably the most inefficient code i ever wrote
 
@@ -82,16 +98,6 @@ class MyMainApp(App):
         employee5_chosed = False
         employee6_chosed = False
         print("employee1_choose was set to: " + str(employee1_chosed))
-
-        if employee1_chosed == True:
-            print("trying step 2")
-
-            sql = "INSERT INTO feedback (name, stars) VALUES (%s, %s)" #inserting data into the mysql database
-            val = ("Michael", "") #going to add stars later
-            mycursor.execute(sql, val)
-
-            mydb.commit() #need this to update the db
-            print(mycursor.rowcount, "record inserted. step 2 worked")
 
     def employee2_choose(self):
         global employee2_chosed
@@ -147,6 +153,16 @@ class MyMainApp(App):
         employee5_chosed = False
         employee6_chosed = True
         print("employee6_choose was set to: " + str(employee6_chosed))
+
+
+    def submitbtn(self):
+        print("submiting..")
+        if stars1 == True and employee1_chosed == True:
+            print("1 star - Michael")
+            sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+            val = ("John", "Highway 21")
+            mycursor.execute(sql, val)
+
 
     def build(self):
         return kv

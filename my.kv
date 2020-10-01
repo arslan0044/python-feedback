@@ -31,6 +31,13 @@ WindowManager: #this will tell the app we are using 2 windows
             size_hint: 0.2, 0.1
             on_release: app.root.current = "second"
 
+        Button:
+            id: submit
+            pos_hint: {"y":0.3, "x":0.3}
+            text: "Submit"
+            size_hint: 0.2, 0.1
+            on_release: app.submitbtn()
+
         ToggleButton:
             id: star1
             size_hint: 0.1, 0.1
@@ -80,35 +87,32 @@ WindowManager: #this will tell the app we are using 2 windows
 <SecondWindow>
     name: "second"
     FloatLayout:
-
-        Button:
-            text: "Go Back"
-            pos_hint: {"y":0.7, "x":0.4}
-            size_hint: 0.2, 0.1
-            on_release: app.root.current = "main"
-
         Button:
             text: "Michael"
             pos_hint: {"y":0.5, "x":0.3}
             size_hint: 0.2, 0.1
             on_press: app.employee1_choose()
+            on_release: app.root.current = "main"
 
         Button:
             text: "John"
             pos_hint: {"y":0.4, "x":0.3}
             size_hint: 0.2, 0.1
             on_press: app.employee2_choose()
+            on_release: app.root.current = "main"
 
         Button:
             text: "Betty"
             pos_hint: {"y":0.3, "x":0.3}
             size_hint: 0.2, 0.1
             on_press: app.employee3_choose()
+            on_release: app.root.current = "main"
 
         Button:
             text: "Elizabeth"
             pos_hint: {"y":0.4, "x":0.5}
             size_hint: 0.2, 0.1
+            on_release: app.root.current = "main"
             on_press: app.employee5_choose()
 
         Button:
@@ -116,8 +120,12 @@ WindowManager: #this will tell the app we are using 2 windows
             pos_hint: {"y":0.3, "x":0.5}
             size_hint: 0.2, 0.1
             on_press: app.employee4_choose()
+            on_release: app.root.current = "main"
+
+
         Button:
             text: "George"
             pos_hint: {"y":0.5, "x":0.5}
             size_hint: 0.2, 0.1
             on_press: app.employee6_choose()
+            on_release: app.root.current = "main"
