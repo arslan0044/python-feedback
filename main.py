@@ -75,7 +75,7 @@ class MyMainApp(App):
     def employee1_choose(self):
         global employee1_chosed
         employee1_chosed = True
-        #settings these all to false to only 1 at the time can be chosen
+        #set these all to false so only 1 at the time can be chosen
         employee2_chosed = False
         employee3_chosed = False
         employee4_chosed = False
@@ -86,16 +86,16 @@ class MyMainApp(App):
         if employee1_chosed == True:
             print("trying step 2")
 
-            sql = "INSERT INTO feedback (name, stars) VALUES (%s, %s)"
-            val = ("Michael", "")
+            sql = "INSERT INTO feedback (name, stars) VALUES (%s, %s)" #inserting data into the mysql database
+            val = ("Michael", "") #going to add stars later
             mycursor.execute(sql, val)
 
-            mydb.commit()
+            mydb.commit() #need this to update the db
             print(mycursor.rowcount, "record inserted. step 2 worked")
 
     def employee2_choose(self):
         global employee2_chosed
-        #settings these all to false to only 1 at the time can be chosen
+        #set these all to false so only 1 at the time can be chosen
         employee1_chosed = False
         employee2_chosed = True
         employee3_chosed = False
@@ -106,7 +106,7 @@ class MyMainApp(App):
 
     def employee3_choose(self):
         global employee3_chosed
-        #settings these all to false to only 1 at the time can be chosen
+        #set these all to false so only 1 at the time can be chosen
         employee1_chosed = False
         employee2_chosed = False
         employee3_chosed = True
@@ -117,7 +117,7 @@ class MyMainApp(App):
 
     def employee4_choose(self):
         global employee4_chosed
-        #settings these all to false to only 1 at the time can be chosen
+       #set these all to false so only 1 at the time can be chosen
         employee1_chosed = False
         employee2_chosed = False
         employee3_chosed = False
@@ -128,7 +128,7 @@ class MyMainApp(App):
 
     def employee5_choose(self):
         global employee5_chosed
-        #settings these all to false to only 1 at the time can be chosen
+        #set these all to false so only 1 at the time can be chosen
         employee1_chosed = False
         employee2_chosed = False
         employee3_chosed = False
@@ -139,7 +139,7 @@ class MyMainApp(App):
 
     def employee6_choose(self):
         global employee6_chosed
-        #settings these all to false to only 1 at the time can be chosen
+        #set these all to false so only 1 at the time can be chosen
         employee1_chosed = False
         employee2_chosed = False
         employee3_chosed = False
